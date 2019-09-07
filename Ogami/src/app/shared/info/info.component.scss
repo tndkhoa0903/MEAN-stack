@@ -1,0 +1,100 @@
+.info-spacer {
+  flex: 1 1 auto;
+}
+
+.info-container {
+  width: 61%;
+  font-family: ceraPro;
+  display: flex;
+
+  .mail-phone {
+    width: 406px;
+    display: flex;
+    justify-content: space-between;
+
+    .mail span {
+      font-size: 14px;
+      display: inline-block;
+      padding-left: 10px;
+    }
+
+    .mail i:hover {
+      transform: scale(1.1);
+    }
+
+    i {
+      cursor: pointer;
+    }
+
+    .phone span {
+      font-size: 14px;
+      display: inline-block;
+      padding-left: 10px;
+    }
+
+    .phone i:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .info-login {
+    width: 406px;
+    display: flex;
+    justify-content: space-between;
+
+    .info-social i {
+      padding-right: 15px;
+      cursor: pointer;
+    }
+
+    .info-social i:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .info-login {
+    justify-content: flex-end !important;
+    text-align: end;
+  }
+
+  .info-container {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .mail-phone-xs {
+    i {
+      cursor: pointer;
+    }
+
+    i:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+  .info-login {
+    justify-content: flex-end !important;
+  }
+
+  .info-container {
+    justify-content: space-between !important;
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  .mail-phone {
+    justify-content: flex-start !important;
+  }
+
+  .info-login {
+    justify-content: flex-end !important;
+  }
+
+  .info-social {
+    margin-right: 20%;
+  }
+}

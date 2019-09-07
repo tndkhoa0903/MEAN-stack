@@ -1,0 +1,38 @@
+<mat-toolbar class="info">
+  <div fxHide.xs class="info-spacer"></div>
+  <div fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="70" class="info-container">
+
+    <div fxHide.xs class="mail-phone">
+      <div class="mail">
+        <i class="fa fa-envelope"></i>
+        <span>tilovemc98@gmail.com</span>
+      </div>
+      <div class="phone">
+        <i class="fa fa-phone"></i>
+        <span>0969142237</span>
+      </div>
+    </div>
+
+    <div class="info-spacer"></div>
+
+    <div class="info-login">
+      <span fxHide.xs fxHide.sm class="info-social">
+        <div>
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-pinterest-p"></i>
+        </div>
+      </span>
+      <span class="info-lang">
+        <i class="fa fa-facebook"></i>
+        <button mat-button>English</button>
+      </span>
+      <span class="login">
+        <i class="fa fa-user"></i>
+        <button mat-button [routerLink]="['/login']">Login</button>
+      </span>
+    </div>
+  </div>
+  <div fxHide.xs class="info-spacer"></div>
+</mat-toolbar>
