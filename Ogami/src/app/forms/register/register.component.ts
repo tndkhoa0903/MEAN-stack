@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -6,7 +7,6 @@ import {
   FormControl,
   EmailValidator
 } from '@angular/forms';
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -14,6 +14,17 @@ import {
 })
 export class RegisterComponent implements OnInit {
   userForm: FormGroup;
+  messageClass;
+  message;
+  processing: boolean;
+  emailValid;
+  emailMessage;
+  usernameValid;
+  usernameMessage;
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthService
+  ) {}
   createForm() {
     this.userForm = this.formBuilder.group(
       {
@@ -48,8 +59,18 @@ export class RegisterComponent implements OnInit {
     );
   }
 
-  constructor(private formBuilder: FormBuilder) {
-    this.createForm();
+  disableForm() {
+    this.userForm.controls.email.disable();
+    this.userForm.controls.password.disable();
+    this.userForm.controls.username.disable();
+    this.userForm.controls.verifyPassword.disable();
+  }
+
+  enableForm() {
+    this.userForm.controls.email.enable();
+    this.userForm.controls.password.enable();
+    this.userForm.controls.username.enable();
+    this.userForm.controls.verifyPassword.enable();
   }
 
   get email() {
@@ -108,5 +129,57 @@ export class RegisterComponent implements OnInit {
 
     return condition ? { passwordsDoNotMatch: true } : null;
   }
-  ngOnInit() {}
+
+  onRegisterSubmit() {
+    this.processing = true;
+    this.disableForm();
+    const user = {
+      email: this.userForm.get('email').value,
+      username: this.userForm.get('username').value,
+      password: this.userForm.get('password').value
+    };
+
+    this.authService.registerUser(user).subscribe(data => {
+      if (!data.success) {
+        this.messageClass = 'alert alert-danger';
+        this.message = data.message;
+        this.processing = false;
+        this.enableForm();
+      } else {
+        this.messageClass = 'alert alert-success';
+        this.message = data.message;
+      }
+    });
+  }
+
+  checkEmail() {
+    const email = this.userForm.get('email').value;
+    this.authService.checkEmail(email).subscribe(data => {
+      if (!data.success) {
+        this.emailValid = false;
+        this.emailMessage = data.message;
+      } else {
+        this.emailValid = true;
+        this.emailMessage = data.message;
+      }
+    });
+  }
+
+  checkUsername() {
+    const username = this.userForm.get('username').value;
+    this.authService.checkUsername(username).subscribe(data => {
+      if (!data.success) {
+        this.usernameValid = false;
+        this.usernameMessage = data.message;
+      } else {
+        this.usernameValid = true;
+        this.usernameMessage = data.message;
+      }
+    });
+  }
+
+  ngOnInit() {
+    this.createForm();
+    this.processing = false;
+  }
 }
