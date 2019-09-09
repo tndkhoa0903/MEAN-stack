@@ -1,3 +1,77 @@
 <app-info></app-info>
+<mat-toolbar class="header">
+  <div fxHide.xs fxHide.sm class="header-spacer"></div>
+
+  <mat-sidenav-container>
+    <mat-sidenav #menu mode="side" align="end">
+      <span fxLayout="column" class="header-menu">
+        <button class="button-active" mat-button [routerLink]="['/']">
+          Home
+        </button>
+        <button mat-button>Shop</button>
+        <button mat-button>Products</button>
+        <button mat-button [routerLink]="['/blogs']">Blog</button>
+        <button mat-button [matMenuTriggerFor]="pages">Pages</button>
+        <mat-menu #pages="matMenu">
+          <button mat-menu-item [routerLink]="['/contact']">Contact</button>
+          <button mat-menu-item [routerLink]="['/page-faq']">FAQ</button>
+          <button mat-menu-item [routerLink]="['/coming-soon']">
+            Coming Soon
+          </button>
+        </mat-menu>
+        <button mat-button (click)="menu.toggle()">Close</button>
+      </span>
+    </mat-sidenav>
+  </mat-sidenav-container>
+
+  <div fxHide fxShow.xs fxShow.sm class="menu-xs">
+    <button mat-button class="xs-open-menu" (click)="menu.toggle()">
+      <img src=" ../../../assets/menu.svg">
+    </button>
+  </div>
+
+  <div fxFlex.sm="100" fxFlex.md="100" fxLayout="row" fxFlex.lg="70" class="header-container">
+    <span class="header-logo">
+      <a [routerLink]="['/']" routerLinkActive="router-link-active"> <img src="../../../assets/logo.png" /></a>
+    </span>
+
+    <span fxHide.xs fxHide.sm class="header-menu" fxLayoutAlign="center end">
+      <button class="button-active" mat-button [routerLink]="['/']">
+        Home
+      </button>
+      <button mat-button>Shop</button>
+      <button mat-button>Products</button>
+      <button mat-button [routerLink]="['/blogs']">Blog</button>
+      <button mat-button [matMenuTriggerFor]="pages">Pages</button>
+      <mat-menu #pages="matMenu">
+        <button mat-menu-item [routerLink]="['/contact']">Contact</button>
+        <button mat-menu-item [routerLink]="['/page-faq']">FAQ</button>
+        <button mat-menu-item [routerLink]="['/coming-soon']">
+          Coming Soon
+        </button>
+      </mat-menu>
+    </span>
+
+    <span class="header-cash">
+      <span class="notifications">
+        <img src="../../../assets/round-favorite_border.svg" />
+        <span matBadgeOverlap="false" matBadgeColor="warn" matBadge="4" matBadgePosition="above" matBadgeSize="small">
+        </span>
+      </span>
+      <span class="cash-noti">
+        <img src="../../../assets/round-payment.svg" />
+        <span matBadgeOverlap="false" matBadgeColor="warn" matBadge="4" matBadgePosition="above" matBadgeSize="small">
+        </span>
+      </span>
+      <span class="cash">{{ uCash | currency }}</span>
+    </span>
+
+  </div>
+  <!--container -->
+  <div fxHide.xs fxHide.sm class="header-spacer"></div>
+</mat-toolbar>
+
+
+
 
 <app-departments></app-departments>

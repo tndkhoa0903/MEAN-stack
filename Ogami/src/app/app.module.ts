@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './shared/header/header.component';
 import { DepartmentsComponent } from './shared/departments/departments.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { DepartmentsComponent } from './shared/departments/departments.component
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

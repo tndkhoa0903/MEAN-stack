@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+* {
+  font-family: 'Comfortaa', cursive;
+}
+
+.header {
+  background-color: white;
+  width: 100%;
+  display: flex;
+
+  .header-spacer {
+    flex: 1 1 auto;
+  }
+
+  .header-container {
+    width: 61%;
+    font-family: ceraPro;
+    display: flex;
+    justify-content: space-between;
+
+    .header-menu {
+      width: 48%;
+      display: flex;
+      padding-bottom: 0%;
+    }
+
+    .header-menu button {
+      text-transform: uppercase;
+      font-weight: 1000;
+      font-size: 16px;
+      padding-top: 8px;
+    }
+
+    .header-menu button:hover {
+      color: #88c74a;
+    }
+
+    .header-menu .button-active {
+      color: #88c74a;
+    }
+
+    .header-cash {
+      display: flex;
+      align-items: flex-end;
+
+      .notifications {
+        padding-right: 20px;
+
+        img:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+      }
+
+      .cash-noti {
+        padding-right: 20px;
+
+        img:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+      }
+
+      span img {
+        height: 25px;
+        width: 25px;
+      }
+
+
+      .cash {
+        font-size: 18px;
+        padding-left: 10px;
+        font-family: ceraPro;
+      }
+    }
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+  background-color: antiquewhite;
+}
+
+
+@media only screen and (max-width: 599px) {
+
+  .header-container {
+    width: 100% !important;
+  }
+
+  .header-cash {
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+  }
+
+  .cash {
+    font-size: 14px !important;
+    font-family: ceraPro !important;
+    text-align: end !important;
+    padding-bottom: 0px !important;
+    font-weight: 800;
+  }
+
+  .header-logo {
+    right: 50% !important;
+  }
+}
+
+mat-sidenav-container {
+  height: 35%;
+  width: auto;
+  position: fixed;
+  top: 50px;
+
+  mat-sidenav {
+    background-color: #a0d26e;
+    color: white;
+    font-family: ceraPro;
+    height: auto;
+    width: 300px;
+
+    button {
+      font-size: 16px !important;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+  mat-sidenav-container {
+    top: 120px !important;
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  .header-container {
+    align-content: flex-end;
+  }
+}
