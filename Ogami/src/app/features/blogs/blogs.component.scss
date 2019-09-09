@@ -1,0 +1,162 @@
+.blog {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  .blog-spacer {
+    flex: 1 1 auto;
+  }
+
+  .blog-container {
+    width: 61%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+
+    .content {
+      width: 60%;
+    }
+
+    .blog-row-1 {
+      display: flex;
+      justify-content: space-between;
+
+      mat-card {
+        margin: 10px 10px;
+
+        img {
+          opacity: 0.8;
+        }
+
+        img:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+
+      mat-card mat-card-actions {
+        button {
+          background-color: #88c74a;
+          color: white;
+        }
+
+        button:hover {
+          color: #88c74a;
+          background-color: white;
+        }
+      }
+    }
+
+    .load-more button {
+      background-color: #88c74a;
+      color: white;
+      margin: 30px 0px;
+      border-radius: 25px;
+    }
+
+    .load-more button:hover {
+      color: #88c74a;
+      background-color: white;
+    }
+  }
+
+  .blog-container {
+    .actions {
+      width: 20%;
+      margin-top: 10px;
+      height: auto;
+
+      .btn-search {
+        width: 100%;
+        display: flex;
+        background-color: #a0d26e;
+        border-radius: 10px;
+
+        input {
+          color: white;
+          width: 90%;
+          font-family: ceraPro;
+          padding-left: 8px;
+        }
+
+        button mat-icon {
+          color: white;
+        }
+      }
+
+      .title {
+        margin-top: 30px;
+        font-family: ceraPro;
+
+        h4 {
+          z-index: 1;
+        }
+
+        h4::before {
+          content: "";
+          position: absolute;
+          width: 5%;
+          border-bottom: solid 3px #88c74a;
+        }
+      }
+
+      .categories {
+        margin-top: 50px;
+      }
+
+      .recent-post {
+        margin-top: 50px;
+        width: 100%;
+        word-wrap: break-word;
+
+
+        .item-1 {
+          flex-wrap: wrap;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          height: auto;
+          margin-top: 20px;
+
+          a {
+            width: 40%;
+          }
+
+          a:hover {
+            img {
+              opacity: 1;
+            }
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+            opacity: 0.8;
+          }
+
+          h4 {
+            width: 50%;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .search-tag {
+        margin-top: 50px;
+
+        .tags button {
+          margin-left: 8px;
+          background-color: #88c74a;
+          color: white;
+        }
+
+        .tags button:hover {
+          background-color: white;
+          color: #88c74a;
+        }
+      }
+    }
+  }
+}

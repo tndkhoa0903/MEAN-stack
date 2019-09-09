@@ -1,3 +1,4 @@
+import { BlogsComponent } from './features/blogs/blogs.component';
 import { ComingsoonComponent } from './features/comingsoon/comingsoon.component';
 import { FaqComponent } from './features/faq/faq.component';
 import { PagenotfoundComponent } from './shared/pagenotfound/pagenotfound.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'coming-soon', component: ComingsoonComponent },
+  { path: 'blogs', component: BlogsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '404', component: PagenotfoundComponent },
   { path: '**', component: PagenotfoundComponent }

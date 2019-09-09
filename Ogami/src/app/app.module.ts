@@ -30,6 +30,7 @@ import { ContactComponent } from './features/contact/contact.component';
 import { ComingsoonComponent } from './features/comingsoon/comingsoon.component';
 import { HeaderDirective } from './shared/header/header.directive';
 import { Btnbot2topDirective } from './btnbot2top.directive';
+import { BlogsComponent } from './features/blogs/blogs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,8 @@ import { Btnbot2topDirective } from './btnbot2top.directive';
     ContactComponent,
     ComingsoonComponent,
     HeaderDirective,
-    Btnbot2topDirective
+    Btnbot2topDirective,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,
