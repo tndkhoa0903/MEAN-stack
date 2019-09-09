@@ -2,10 +2,13 @@ import { RegisterComponent } from './forms/register/register.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './forms/login/login.component';
+import { HomepageComponent } from './features/homepage/homepage.component';
 
 const routes: Routes = [
+  { path: 'home', component: HomepageComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -14,4 +17,8 @@ const routes: Routes = [
 })
 export class AppRoutingModule {}
 
-export const routingComponents = [LoginComponent];
+export const routingComponents = [
+  LoginComponent,
+  RegisterComponent,
+  HomepageComponent
+];

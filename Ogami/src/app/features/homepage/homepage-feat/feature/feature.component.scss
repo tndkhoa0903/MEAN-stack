@@ -1,0 +1,73 @@
+.feature {
+  display: flex;
+
+  .feat-spacer {
+    flex: 1 1 auto;
+  }
+
+  .feat-container {
+    position: relative;
+    display: flex;
+    width: 61%;
+    height: 120px;
+    background-color: white;
+    margin-top: -60px;
+    justify-content: space-around;
+    padding-top: 20px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+
+    .content {
+      h4 {
+        text-align: center;
+        padding-top: 8px;
+        font-size: 16px;
+        font-family: ceraPro;
+        font-weight: 600;
+      }
+
+      img {
+        justify-self: center;
+        align-content: center;
+        margin-left: 40%;
+      }
+
+      .feat-icon:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      p {
+        padding-top: 0px;
+        font-family: ceraPro;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  p {
+    font-size: 14px !important;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 14px !important;
+  }
+
+  .feat-container {
+    align-content: center !important;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+  p {
+    text-align: center;
+  }
+
+  .feat-container {
+    align-content: center !important;
+    height: auto !important;
+  }
+}

@@ -17,6 +17,13 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { FbannerComponent } from './shared/footer/fbanner/fbanner.component';
 import { FnavbarComponent } from './shared/footer/fnavbar/fnavbar.component';
 import { FsubComponent } from './shared/footer/fsub/fsub.component';
+import { HomepageComponent } from './features/homepage/homepage.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BannerComponent } from './features/homepage/homepage-feat/banner/banner.component';
+import { FeatureComponent } from './features/homepage/homepage-feat/feature/feature.component';
+import { TypeproductsComponent } from './features/homepage/homepage-feat/typeproducts/typeproducts.component';
+import { SliderbannerComponent } from './features/homepage/homepage-feat/sliderbanner/sliderbanner.component';
+import { DealoftheweekComponent } from './features/homepage/homepage-feat/dealoftheweek/dealoftheweek.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +35,13 @@ import { FsubComponent } from './shared/footer/fsub/fsub.component';
     FooterComponent,
     FbannerComponent,
     FnavbarComponent,
-    FsubComponent
+    FsubComponent,
+    HomepageComponent,
+    BannerComponent,
+    FeatureComponent,
+    TypeproductsComponent,
+    SliderbannerComponent,
+    DealoftheweekComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +51,8 @@ import { FsubComponent } from './shared/footer/fsub/fsub.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgbModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

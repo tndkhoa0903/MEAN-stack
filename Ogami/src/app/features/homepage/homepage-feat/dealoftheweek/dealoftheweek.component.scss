@@ -1,0 +1,166 @@
+.deal {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  margin-top: 80px;
+  background-image: url(../../../../../assets/pages/wcu_bg.png);
+  margin-bottom: 100px;
+
+  .deal-spacer {
+    flex: 1 1 auto;
+  }
+
+  .deal-container {
+    width: 61%;
+
+    .deal-title {
+      text-align: center;
+    }
+
+    .deal-title h1 {
+      font-family: ceraPro;
+      font-size: 44px;
+      font-weight: 900;
+    }
+
+    .deal-content {
+      margin-top: 100px;
+
+      .content-col-1 {
+        display: flex;
+        justify-content: space-around;
+
+        .content-eat-healthy {
+          display: flex;
+
+          .content h3 {
+            font-size: 20px;
+            margin-right: 10px;
+            font-family: ceraPro;
+            text-align: end;
+            color: #88c74a;
+          }
+
+          .content p {
+            font-family: ceraPro;
+            font-size: 16px;
+            text-align: end;
+          }
+
+          img {
+            height: 25px;
+            width: 25px;
+          }
+        }
+
+        .content-fresh {
+          display: flex;
+
+          .content h3 {
+            font-size: 20px;
+            margin-right: 10px;
+            font-family: ceraPro;
+            text-align: start;
+            color: #88c74a;
+          }
+
+          .content p {
+            font-family: ceraPro;
+            font-size: 16px;
+            text-align: start;
+          }
+
+          img {
+            height: 25px;
+            width: 25px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .deal-title h1 {
+    font-size: 30px !important;
+    font-family: ceraPro;
+  }
+
+  .content-col-1 {
+    width: 100%;
+    justify-content: space-between !important;
+  }
+
+  .deal-container .deal-content {
+    .content-col-1 .content-eat-healthy {
+      margin-right: 10px;
+    }
+
+    .content-col-1 .content-fresh {
+      margin-left: 10px;
+    }
+
+    .content-col-1 .content-eat-healthy .content {
+      h3 {
+        font-size: 15px !important;
+      }
+
+      p {
+        font-size: 13px !important;
+      }
+    }
+
+    .content-col-1 .content-fresh .content {
+      h3 {
+        font-size: 15px !important;
+      }
+
+      p {
+        font-size: 13px !important;
+      }
+    }
+  }
+}
+
+@media only screen and(min-width: 600px) and (max-width: 959px) {
+  .deal-title h1 {
+    font-size: 30px !important;
+    font-family: ceraPro;
+  }
+
+  .content-col-1 {
+    width: 100%;
+    justify-content: space-between !important;
+  }
+
+  .deal-container .deal-content {
+    .content-col-1 .content-eat-healthy {
+      margin-right: 10px;
+    }
+
+    .content-col-1 .content-fresh {
+      margin-left: 10px;
+    }
+
+    .content-col-1 .content-eat-healthy .content {
+      h3 {
+        font-size: 15px !important;
+      }
+
+      p {
+        font-size: 13px !important;
+      }
+    }
+
+    .content-col-1 .content-fresh .content {
+      h3 {
+        font-size: 15px !important;
+      }
+
+      p {
+        font-size: 13px !important;
+      }
+    }
+  }
+}
