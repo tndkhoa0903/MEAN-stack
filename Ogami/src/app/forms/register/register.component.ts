@@ -103,6 +103,8 @@ export class RegisterComponent implements OnInit {
       ? 'Must be at least 5 characters'
       : this.userForm.get('username').hasError('maxlength')
       ? 'No more than 15 characters'
+      : this.emailValid
+      ? 'dasdas'
       : '';
   }
 
@@ -148,32 +150,6 @@ export class RegisterComponent implements OnInit {
       } else {
         this.messageClass = 'alert alert-success';
         this.message = data.message;
-      }
-    });
-  }
-
-  checkEmail() {
-    const email = this.userForm.get('email').value;
-    this.authService.checkEmail(email).subscribe(data => {
-      if (!data.success) {
-        this.emailValid = false;
-        this.emailMessage = data.message;
-      } else {
-        this.emailValid = true;
-        this.emailMessage = data.message;
-      }
-    });
-  }
-
-  checkUsername() {
-    const username = this.userForm.get('username').value;
-    this.authService.checkUsername(username).subscribe(data => {
-      if (!data.success) {
-        this.usernameValid = false;
-        this.usernameMessage = data.message;
-      } else {
-        this.usernameValid = true;
-        this.usernameMessage = data.message;
       }
     });
   }

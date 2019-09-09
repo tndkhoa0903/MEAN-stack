@@ -1,1 +1,40 @@
-<p>login works!</p>
+<div class="frm-login">
+  <div class="frm-spacer"></div>
+  <div fxFlex.xs="90" fxFlex.sm="80" fxFlex.md="60" fxFlex.lg="30" class="frm-container">
+
+    <div class="title">
+      <h2>Login</h2>
+    </div>
+
+    <div class="content">
+      <form class="fm-login" [formGroup]="loginForm">
+        <div class="form-group">
+          <mat-form-field>
+            <input matInput type="text" autocomplete="off" placeholder="Username" formControlName="username">
+            <mat-error *ngIf="username.invalid">
+              {{getErrorUsernameMessage()}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field>
+            <input matInput type="password" autocomplete="off" placeholder="Password" formControlName="password">
+            <mat-error *ngIf="password.invalid">
+              {{getErrorPasswordMessage()}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+    <div class="action">
+      <button [disabled]="!loginForm.valid" mat-raised-button>Sign in</button>
+    </div>
+
+    <div class="footer">
+      <a [routerLink]="['/register']" mat-button>Or create an account?</a>
+    </div>
+
+
+  </div>
+  <div class="frm-spacer"></div>
+</div>
