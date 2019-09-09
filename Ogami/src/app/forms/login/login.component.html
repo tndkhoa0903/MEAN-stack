@@ -9,6 +9,10 @@
       <h2>Login</h2>
     </div>
 
+    <div class="show-hide-message" fxFlex="100">
+      <div [ngClass]="messageClass">{{ message }}</div>
+    </div>
+
     <div class="content">
       <form class="fm-login" [formGroup]="loginForm">
         <div class="form-group">
@@ -30,7 +34,7 @@
       </form>
     </div>
     <div class="action">
-      <button [disabled]="!loginForm.valid" mat-raised-button>Sign in</button>
+      <button [disabled]="!loginForm.valid || processing" (click)="onLoginSubmit()" mat-raised-button>Sign in</button>
     </div>
 
     <div class="footer">

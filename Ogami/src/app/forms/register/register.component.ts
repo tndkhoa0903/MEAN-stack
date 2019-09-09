@@ -7,6 +7,12 @@ import {
   FormControl,
   EmailValidator
 } from '@angular/forms';
+
+export interface RegisterResponse {
+  success: boolean;
+  message: string;
+}
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -62,14 +68,16 @@ export class RegisterComponent implements OnInit {
   disableForm() {
     this.userForm.controls.email.disable();
     this.userForm.controls.password.disable();
-    this.userForm.controls.username.disable();
+    // tslint:disable-next-line:no-string-literal
+    this.userForm.controls['username'].disable();
     this.userForm.controls.verifyPassword.disable();
   }
 
   enableForm() {
     this.userForm.controls.email.enable();
     this.userForm.controls.password.enable();
-    this.userForm.controls.username.enable();
+    // tslint:disable-next-line:no-string-literal
+    this.userForm.controls['username'].disable();
     this.userForm.controls.verifyPassword.enable();
   }
 
@@ -141,7 +149,7 @@ export class RegisterComponent implements OnInit {
       password: this.userForm.get('password').value
     };
 
-    this.authService.registerUser(user).subscribe(data => {
+    this.authService.registerUser(user).subscribe((data: RegisterResponse) => {
       if (!data.success) {
         this.messageClass = 'alert alert-danger';
         this.message = data.message;
