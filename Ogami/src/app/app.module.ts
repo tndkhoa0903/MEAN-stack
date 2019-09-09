@@ -28,6 +28,7 @@ import { PagenotfoundComponent } from './shared/pagenotfound/pagenotfound.compon
 import { FaqComponent } from './features/faq/faq.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { ComingsoonComponent } from './features/comingsoon/comingsoon.component';
+import { HeaderDirective } from './shared/header/header.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { ComingsoonComponent } from './features/comingsoon/comingsoon.component'
     PagenotfoundComponent,
     FaqComponent,
     ContactComponent,
-    ComingsoonComponent
+    ComingsoonComponent,
+    HeaderDirective
   ],
   imports: [
     BrowserModule,
