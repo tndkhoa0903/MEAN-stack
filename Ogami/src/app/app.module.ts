@@ -25,6 +25,7 @@ import { TypeproductsComponent } from './features/homepage/homepage-feat/typepro
 import { SliderbannerComponent } from './features/homepage/homepage-feat/sliderbanner/sliderbanner.component';
 import { DealoftheweekComponent } from './features/homepage/homepage-feat/dealoftheweek/dealoftheweek.component';
 import { PagenotfoundComponent } from './shared/pagenotfound/pagenotfound.component';
+import { FaqComponent } from './features/faq/faq.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import { PagenotfoundComponent } from './shared/pagenotfound/pagenotfound.compon
     TypeproductsComponent,
     SliderbannerComponent,
     DealoftheweekComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,

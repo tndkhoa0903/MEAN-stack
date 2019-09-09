@@ -1,0 +1,105 @@
+.page-faq {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 60px;
+  padding-bottom: 50px;
+
+  .faq-spacer {
+    flex: 1 1 auto;
+  }
+
+  .faq-container {
+    width: 61%;
+    height: auto;
+
+    .faq-section {
+      margin: 40px 0;
+      position: relative;
+      height: auto;
+    }
+
+    .faq-section p {
+      display: none;
+    }
+
+    .faq-section input {
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+      opacity: 0;
+      display: none\9;
+      margin: 0;
+      width: 100%;
+      height: 36px;
+    }
+
+    .faq-section label+p {
+      display: block;
+      color: #999;
+      font-size: .85em;
+      transition: all .15s ease-out;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .faq-section input[type=checkbox]:checked~p {
+      display: block;
+      color: #444;
+      font-size: 1em;
+      text-overflow: clip;
+      white-space: normal;
+      overflow: visible;
+    }
+
+    .faq-section label {
+      font-size: 1.0em;
+      background: #eee;
+      display: block;
+      position: relative;
+      height: 20px;
+      padding: 7px 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      border: 1px solid #ddd;
+      border-left: solid 5px #88c74a;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+      height: auto;
+      transition: all .15s ease-out;
+    }
+
+    .faq-section label::selection {
+      background: none;
+    }
+
+    .faq-section label:hover {
+      background: #f5f5f5;
+    }
+
+    .faq-section input[type=checkbox]:checked~label {
+      border-color: #88c74a;
+      background: #a0d26e;
+      color: white;
+      box-shadow: 0 0 1px rgba(0, 0, 0, .4);
+    }
+
+    .faq-section label::before {
+      content: '';
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      margin-top: -6px;
+      border: 6px solid transparent;
+      border-left-color: inherit;
+    }
+
+    .faq-section input[type=checkbox]:checked~label::before {
+      border: 6px solid transparent;
+      border-top-color: inherit;
+      margin-top: -3px;
+      right: 10px;
+    }
+  }
+}
