@@ -31,6 +31,7 @@ import { ComingsoonComponent } from './features/comingsoon/comingsoon.component'
 import { HeaderDirective } from './shared/header/header.directive';
 import { Btnbot2topDirective } from './btnbot2top.directive';
 import { BlogsComponent } from './features/blogs/blogs.component';
+import { BlogdetailComponent } from './features/blogdetail/blogdetail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { BlogsComponent } from './features/blogs/blogs.component';
     ComingsoonComponent,
     HeaderDirective,
     Btnbot2topDirective,
-    BlogsComponent
+    BlogsComponent,
+    BlogdetailComponent
   ],
   imports: [
     BrowserModule,

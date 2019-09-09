@@ -8,6 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './forms/login/login.component';
 import { HomepageComponent } from './features/homepage/homepage.component';
 import { ContactComponent } from './features/contact/contact.component';
+import { BlogdetailComponent } from './features/blogdetail/blogdetail.component';
 
 const routes: Routes = [
   { path: 'home', component: HomepageComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'coming-soon', component: ComingsoonComponent },
+  { path: 'more-detail', component: BlogdetailComponent },
   { path: 'blogs', component: BlogsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '404', component: PagenotfoundComponent },
