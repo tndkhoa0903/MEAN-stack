@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+* {
+  font-family: 'Comfortaa', cursive;
+}
+
+.apartments {
+  display: flex;
+  padding-top: 20px;
+
+  .apart-spacer {
+    flex: 1 1 auto;
+  }
+
+  .apart-container {
+    width: 61%;
+    display: flex;
+    justify-content: space-between;
+
+    .apa-combo-box {
+      mat-form-field {
+        width: 270px;
+        background-color: #88c74a;
+      }
+
+      mat-form-field mat-label {
+        color: white;
+        padding-left: 10px;
+      }
+    }
+
+    .depa-input {
+      display: flex;
+
+      .input mat-form-field {
+        width: 560px;
+        border-left: solid 1px #ebebeb;
+        border-right: solid 1px #ebebeb;
+
+      }
+
+      .input button {
+        background-color: #88c74a;
+        text-transform: uppercase;
+        color: white;
+        height: 50px;
+        margin-left: 10px;
+      }
+
+      .input button:hover {
+        background-color: white;
+        color: #88c74a;
+      }
+    }
+  }
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+::ng-deep .mat-select-arrow {
+  color: white;
+}
+
+::ng-deep .mat-select-value {
+  color: white;
+}
+
+::ng-deep .select-box .mat-select-value {
+  color: black;
+}
+
+@media only screen and (max-width: 599px) {
+
+  .depa-input {
+    width: 100%;
+
+    mat-form-field {
+      width: 100% !important;
+      text-align: center;
+      border-bottom: solid 1px #ebebeb;
+      font-size: 14px !important;
+    }
+
+    .input button {
+      left: 40%;
+      margin-top: 5px;
+      font-size: 12px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+
+  .depa-input {
+    width: 100%;
+
+    mat-form-field {
+      width: 100% !important;
+      text-align: center;
+      border-bottom: solid 1px #ebebeb;
+      font-size: 14px !important;
+    }
+
+    .input button {
+      left: 40%;
+      margin-top: 5px;
+      font-size: 12px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1219px) {
+
+  .apa-combo-box {
+    width: 20% !important;
+
+    mat-form-field {
+      width: 100% !important;
+    }
+  }
+
+  .depa-input {
+    width: 75% !important;
+    justify-content: space-between !important;
+
+    .select-box {
+      width: 40% !important;
+
+      mat-form-field {
+        width: 100% !important;
+      }
+    }
+
+    .input {
+      width: 70% !important;
+
+      mat-form-field {
+        width: 70% !important;
+      }
+
+      button {
+        width: auto !important;
+      }
+    }
+
+  }
+}
+
+@media only screen and(min-width: 1220px) and (max-width: 1920px) {
+  .apa-combo-box {
+    width: 30% !important;
+
+    mat-form-field {
+      width: 100% !important;
+    }
+  }
+
+  .depa-input {
+    width: 75% !important;
+    justify-content: space-between !important;
+    margin-left: 20px;
+
+    .select-box {
+      width: 40% !important;
+
+      mat-form-field {
+        width: 100% !important;
+      }
+    }
+
+    .input {
+      width: 70% !important;
+
+      mat-form-field {
+        width: 70% !important;
+      }
+
+      button {
+        width: auto !important;
+      }
+    }
+  }
+}

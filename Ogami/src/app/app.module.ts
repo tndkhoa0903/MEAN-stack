@@ -10,12 +10,16 @@ import { RegisterComponent } from './forms/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './shared/header/header.component';
+import { DepartmentsComponent } from './shared/departments/departments.component';
 @NgModule({
   declarations: [
     AppComponent,
     InfoComponent,
     routingComponents,
-    RegisterComponent
+    RegisterComponent,
+    HeaderComponent,
+    DepartmentsComponent
   ],
   imports: [
     BrowserModule,
