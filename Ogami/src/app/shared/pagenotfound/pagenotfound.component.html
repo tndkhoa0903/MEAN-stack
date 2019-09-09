@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="page-not-found">
+  <div class="pnf-spacer"></div>
+  <div fxFlex.md="90" fxFlex.lg="70" fxFlex.xs="100" fxLayout.xs="column" fxLayout.sm="column" fxFlex.sm="100"
+    class="pnf-container">
+    <div class="content">
+      <h1><strong>Opps! This page cound not be!!!</strong></h1>
+      <p>Sorry bit the page you are looking for does not exist, have been removed or name changed</p>
+      <button [routerLink]="['/']" mat-button>Go to homepage</button>
+    </div>
+    <div class="banner">
+      <img src="../../../assets/pages/404_img.png">
+
+    </div>
+  </div>
+  <div class="pnf-spacer"></div>
+</div>
+<app-footer></app-footer>

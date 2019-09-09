@@ -1,3 +1,4 @@
+import { PagenotfoundComponent } from './shared/pagenotfound/pagenotfound.component';
 import { RegisterComponent } from './forms/register/register.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -8,7 +9,9 @@ const routes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '404', component: PagenotfoundComponent },
+  { path: '**', component: PagenotfoundComponent }
 ];
 
 @NgModule({

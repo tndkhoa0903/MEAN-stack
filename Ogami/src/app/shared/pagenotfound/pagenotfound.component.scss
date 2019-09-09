@@ -1,0 +1,78 @@
+.page-not-found {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .pnf-spacer {
+    flex: 1 1 auto;
+  }
+
+  .pnf-container {
+    width: 61%;
+    display: flex;
+    justify-content: space-between;
+
+    .content {
+      text-align: start;
+
+      h1 {
+        font-family: ceraPro;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 18px;
+        font-family: ceraPro;
+      }
+
+      button {
+        background-color: #88c74a;
+        color: white;
+        font-size: 18px;
+        text-transform: uppercase;
+        width: auto;
+        height: auto;
+      }
+
+      button:hover {
+        background-color: white;
+        color: #88c74a;
+      }
+    }
+
+    .banner {
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .content {
+    text-align: center !important;
+  }
+
+  .banner {
+    margin-top: 20px;
+
+    img {
+      width: 100% !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+  .content {
+    text-align: center !important;
+  }
+
+  .banner {
+    margin-top: 20px;
+
+    img {
+      width: 100% !important;
+    }
+  }
+}
