@@ -29,6 +29,7 @@ import { FaqComponent } from './features/faq/faq.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { ComingsoonComponent } from './features/comingsoon/comingsoon.component';
 import { HeaderDirective } from './shared/header/header.directive';
+import { Btnbot2topDirective } from './btnbot2top.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { HeaderDirective } from './shared/header/header.directive';
     FaqComponent,
     ContactComponent,
     ComingsoonComponent,
-    HeaderDirective
+    HeaderDirective,
+    Btnbot2topDirective
   ],
   imports: [
     BrowserModule,
