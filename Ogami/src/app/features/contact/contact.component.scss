@@ -1,0 +1,209 @@
+.contact {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 90px;
+  margin-bottom: 90px;
+
+  .contact-container {
+    width: 61%;
+    height: auto;
+
+    .contact-infomation {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-around;
+
+      i {
+        color: #88c74a;
+        position: relative;
+        left: 50%;
+      }
+
+      h3 {
+        font-size: 18px;
+        font-family: ceraPro;
+        text-align: center;
+        padding-top: 8px;
+      }
+
+      i:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.contact-spacer {
+  flex: 1 1 auto;
+}
+
+.leave-mess {
+  display: flex;
+
+  .container {
+    width: 61%;
+
+    .title {
+      text-align: center;
+
+      h1 {
+        font-size: 25px;
+        font-family: ceraPro;
+        text-transform: uppercase;
+        color: #88c74a;
+      }
+
+      h4 {
+        font-size: 16px;
+        font-family: ceraPro;
+      }
+    }
+
+    .message {
+      margin-top: 20px;
+      padding-bottom: 90px;
+
+      .user-mail {
+        display: flex;
+      }
+
+      .user-mail form {
+        width: 600px;
+        height: calc(4em + 1px);
+      }
+    }
+
+    .message .frm-input {
+      input[type="text"] {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 0 1em;
+        padding: 1em;
+        border: 1px solid #ccc;
+        background: #fff;
+        resize: none;
+        outline: none;
+      }
+
+      input[type="text"][required]:focus {
+        border-color: #00bafa;
+      }
+
+      input[type="text"][required]:focus+label[placeholder]:before {
+        color: #00bafa;
+      }
+
+      input[type="text"][required]:focus+label[placeholder]:before,
+      input[type="text"][required]:valid+label[placeholder]:before {
+        transition-duration: .2s;
+        transform: translate(0, -1.5em) scale(0.9, 0.9);
+      }
+
+      input[type="text"][required]:invalid+label[placeholder][alt]:before {
+        content: attr(alt);
+      }
+
+      input[type="text"][required]+label[placeholder] {
+        display: block;
+        pointer-events: none;
+        line-height: 1em;
+        margin-top: calc(-3em - 2px);
+        margin-bottom: calc((3em - 1em) + 2px);
+      }
+
+      input[type="text"][required]+label[placeholder]:before {
+        content: attr(placeholder);
+        display: inline-block;
+        margin: 0 calc(1em + 2px);
+        padding: 0 2px;
+        color: #898989;
+        white-space: nowrap;
+        transition: 0.3s ease-in-out;
+        background-image: linear-gradient(to bottom, #fff, #fff);
+        background-size: 100% 5px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .contact-container {
+    width: 90% !important;
+  }
+
+  .contact-infomation {
+    justify-content: space-around;
+    width: 100%;
+
+    h3 {
+      font-size: 14px !important;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+  .mapouter {
+    height: auto !important;
+    width: auto !important;
+  }
+
+  #gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 610px;
+    width: 100% !important;
+  }
+
+  .contact-infomation {
+    justify-content: space-around;
+    width: 100%;
+
+    h3 {
+      font-size: 14px !important;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  .mapouter {
+    height: auto !important;
+    width: auto !important;
+  }
+
+  #gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 610px;
+    width: 100% !important;
+  }
+
+  .contact-infomation {
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1919px) {
+  .mapouter {
+    height: auto !important;
+    width: auto !important;
+  }
+
+  #gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 610px;
+    width: 100% !important;
+  }
+
+  .contact-infomation {
+    justify-content: space-around;
+    width: 100%;
+  }
+}

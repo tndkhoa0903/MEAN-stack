@@ -26,6 +26,7 @@ import { SliderbannerComponent } from './features/homepage/homepage-feat/sliderb
 import { DealoftheweekComponent } from './features/homepage/homepage-feat/dealoftheweek/dealoftheweek.component';
 import { PagenotfoundComponent } from './shared/pagenotfound/pagenotfound.component';
 import { FaqComponent } from './features/faq/faq.component';
+import { ContactComponent } from './features/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import { FaqComponent } from './features/faq/faq.component';
     SliderbannerComponent,
     DealoftheweekComponent,
     PagenotfoundComponent,
-    FaqComponent
+    FaqComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
