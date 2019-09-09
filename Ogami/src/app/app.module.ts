@@ -27,6 +27,7 @@ import { DealoftheweekComponent } from './features/homepage/homepage-feat/dealof
 import { PagenotfoundComponent } from './shared/pagenotfound/pagenotfound.component';
 import { FaqComponent } from './features/faq/faq.component';
 import { ContactComponent } from './features/contact/contact.component';
+import { ComingsoonComponent } from './features/comingsoon/comingsoon.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +48,8 @@ import { ContactComponent } from './features/contact/contact.component';
     DealoftheweekComponent,
     PagenotfoundComponent,
     FaqComponent,
-    ContactComponent
+    ContactComponent,
+    ComingsoonComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { ComingsoonComponent } from './features/comingsoon/comingsoon.component';
 import { FaqComponent } from './features/faq/faq.component';
 import { PagenotfoundComponent } from './shared/pagenotfound/pagenotfound.component';
 import { RegisterComponent } from './forms/register/register.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'coming-soon', component: ComingsoonComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '404', component: PagenotfoundComponent },
   { path: '**', component: PagenotfoundComponent }
