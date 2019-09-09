@@ -13,6 +13,10 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './shared/header/header.component';
 import { DepartmentsComponent } from './shared/departments/departments.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FooterComponent } from './shared/footer/footer.component';
+import { FbannerComponent } from './shared/footer/fbanner/fbanner.component';
+import { FnavbarComponent } from './shared/footer/fnavbar/fnavbar.component';
+import { FsubComponent } from './shared/footer/fsub/fsub.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +24,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     routingComponents,
     RegisterComponent,
     HeaderComponent,
-    DepartmentsComponent
+    DepartmentsComponent,
+    FooterComponent,
+    FbannerComponent,
+    FnavbarComponent,
+    FsubComponent
   ],
   imports: [
     BrowserModule,

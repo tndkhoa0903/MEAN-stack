@@ -1,0 +1,31 @@
+.fbanner {
+  display: flex;
+  height: auto;
+
+  .fbanner-spacer {
+    flex: 1 1 auto;
+  }
+
+  .fbanner-container {
+    display: flex;
+    width: 61%;
+    background-color: #ebebeb;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+
+    img {
+      height: 55px;
+      width: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .fbanner-container {
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+}

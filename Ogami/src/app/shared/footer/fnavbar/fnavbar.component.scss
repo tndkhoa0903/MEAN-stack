@@ -1,0 +1,92 @@
+.fnavbar {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 70px;
+
+  .fnavbar-spacer {
+    flex: 1 1 auto;
+  }
+
+  .fnavbar-container {
+    display: flex;
+    width: 61%;
+    height: auto;
+    justify-content: space-between;
+
+    .contact p {
+      padding-top: 10px;
+      font-family: ceraPro;
+      font-size: 16px;
+    }
+
+    .fnav {
+      h3 {
+        font-family: ceraPro;
+        text-transform: uppercase;
+        font-size: 17px;
+      }
+
+      a {
+        color: black;
+      }
+
+      p {
+        font-family: ceraPro;
+        font-size: 15px;
+      }
+
+      a:hover {
+        color: #88c74a;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+
+  .contact {
+    p {
+      font-size: 15px !important;
+    }
+  }
+
+  .fnav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    h3 {
+      color: #88c74a;
+      font-size: 15px !important;
+    }
+
+    p {
+      font-size: 12px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+  .contact {
+    p {
+      font-size: 15px !important;
+    }
+  }
+
+  .fnav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    h3 {
+      color: #88c74a;
+      font-size: 15px !important;
+    }
+
+    p {
+      font-size: 14px !important;
+    }
+  }
+}
